@@ -1,8 +1,23 @@
+var $titleOffset = $('.mainBlock__title ').offset().top;
+
+var $line = $('.preloader__line');
+$line.css('marginTop', ($titleOffset-16));
+
 jQuery(function($) {
 
-    var $titleOffset = $('.mainBlock__title ').offset().top;
-    var $line = $('.preloader__line');
-    $line.css('marginTop', ($titleOffset-16));
+    // $(window).height()
+
+    var offsetTop = $line.offset().top,
+        offsetBottom = $(window).height() - ( offsetTop + $line.height() ),
+        fillTop = $('.preloader__fillTop'),
+        fillBottom = $('.preloader__fillBottom');
+
+    fillTop.css('bottom', offsetBottom);
+    fillBottom.css('top', offsetTop);
+
+    console.log(fillTop);
+    console.log(offsetBottom);
+    
 
     $(window).on('resize', function() {
         
@@ -37,9 +52,9 @@ jQuery(function($) {
         $('.preloader').addClass('preloader_animate');
     } , 2200);
 
-    setTimeout( function() {
-        $('.preloader').animate({opacity: "hide"}, 200);
-    } , 2800);
+    // setTimeout( function() {
+    //     $('.preloader').animate({opacity: "hide"}, 200);
+    // } , 2800);
 
     var animateItems = $('.animate'),
         elems = $('.section'),
