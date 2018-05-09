@@ -1,5 +1,22 @@
 jQuery(function($) {
 
+    $('.wordsWrap').find('.animate').addClass('animate_active');
+    $('.preloader__line .firstWord').addClass('firstWord_anim1');
+    setTimeout( function() {
+        $('.preloader__line .firstWord').addClass('firstWord_anim2');
+    } , 450);
+    setTimeout( function() {
+        $('.wordsWrap').addClass('wordsWrap_animate');
+    } , 1800);
+
+    setTimeout( function() {
+        $('.preloader').addClass('preloader_animate');
+    } , 2200);
+
+    setTimeout( function() {
+        $('.preloader').animate({opacity: "hide"}, 200);
+    } , 2800);
+
     var animateItems = $('.animate'),
         elems = $('.section'),
         deleteLog = false;
@@ -178,24 +195,24 @@ jQuery(function($) {
     });
 });
 
-window.addEventListener('load', function() {
-    $('.wordsWrap').find('.animate').addClass('animate_active');
-    $('.preloader__line .firstWord').addClass('firstWord_anim1');
-    setTimeout( function() {
-        $('.preloader__line .firstWord').addClass('firstWord_anim2');
-    } , 450);
-    setTimeout( function() {
-        $('.wordsWrap').addClass('wordsWrap_animate');
-    } , 1800);
+// window.addEventListener('load', function() {
+//     $('.wordsWrap').find('.animate').addClass('animate_active');
+//     $('.preloader__line .firstWord').addClass('firstWord_anim1');
+//     setTimeout( function() {
+//         $('.preloader__line .firstWord').addClass('firstWord_anim2');
+//     } , 450);
+//     setTimeout( function() {
+//         $('.wordsWrap').addClass('wordsWrap_animate');
+//     } , 1800);
 
-    setTimeout( function() {
-        $('.preloader').addClass('preloader_animate');
-    } , 2200);
+//     setTimeout( function() {
+//         $('.preloader').addClass('preloader_animate');
+//     } , 2200);
 
-    setTimeout( function() {
-        $('.preloader').animate({opacity: "hide"}, 200);
-    } , 2800);
-});
+//     setTimeout( function() {
+//         $('.preloader').animate({opacity: "hide"}, 200);
+//     } , 2800);
+// });
     
 
 
