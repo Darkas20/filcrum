@@ -1,5 +1,29 @@
 jQuery(function($) {
 
+    var $titleOffset = $('.mainBlock__title ').offset().top;
+    var $line = $('.preloader__line');
+    $line.css('marginTop', ($titleOffset-16));
+
+    $(window).on('resize', function() {
+        
+        if ($(window).width() <= '1440') {
+            $line.css('marginTop', $titleOffset-16);
+        }
+        if ($(window).width() <= '1024') {
+            $line.css('marginTop', $titleOffset-25);
+        }
+        if ($(window).width() <= '767') {
+            $line.css('marginTop', $titleOffset-5);
+        }
+        if ($(window).width() <= '375') {
+            $line.css('marginTop', $titleOffset-9);
+        }
+        if ($(window).width() <= '374') {
+            $line.css('marginTop', $titleOffset-7);
+        }
+
+    });
+
     $('.wordsWrap').find('.animate').addClass('animate_active');
     $('.preloader__line .firstWord').addClass('firstWord_anim1');
     setTimeout( function() {
@@ -172,27 +196,27 @@ jQuery(function($) {
 
     //////////////////////////////////preloader////////////////////////////////
 
-    $(window).on('resize load', function() {
-        var $titleOffset = $('.mainBlock__title ').offset().top;
-        var $line = $('.preloader__line');
-        $line.css('marginTop', ($titleOffset-16));
-        if ($(window).width() <= '1440') {
-            $line.css('marginTop', $titleOffset-16);
-        }
-        if ($(window).width() <= '1024') {
-            $line.css('marginTop', $titleOffset-25);
-        }
-        if ($(window).width() <= '767') {
-            $line.css('marginTop', $titleOffset-5);
-        }
-        if ($(window).width() <= '375') {
-            $line.css('marginTop', $titleOffset-9);
-        }
-        if ($(window).width() <= '374') {
-            $line.css('marginTop', $titleOffset-7);
-        }
+    // $(window).on('resize load', function() {
+    //     var $titleOffset = $('.mainBlock__title ').offset().top;
+    //     var $line = $('.preloader__line');
+    //     $line.css('marginTop', ($titleOffset-16));
+    //     if ($(window).width() <= '1440') {
+    //         $line.css('marginTop', $titleOffset-16);
+    //     }
+    //     if ($(window).width() <= '1024') {
+    //         $line.css('marginTop', $titleOffset-25);
+    //     }
+    //     if ($(window).width() <= '767') {
+    //         $line.css('marginTop', $titleOffset-5);
+    //     }
+    //     if ($(window).width() <= '375') {
+    //         $line.css('marginTop', $titleOffset-9);
+    //     }
+    //     if ($(window).width() <= '374') {
+    //         $line.css('marginTop', $titleOffset-7);
+    //     }
 
-    });
+    // });
 });
 
 // window.addEventListener('load', function() {
