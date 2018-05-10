@@ -2450,16 +2450,12 @@ body {
   content: '';
   width: 0;
   z-index: -1;
-  -webkit-animation-delay: .8s;
-  animation-delay: .8s;
-  -webkit-animation-name: showHide;
-  animation-name: showHide;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -webkit-animation: showHide 1s ease-in;
+  animation: showHide 1s ease-in;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -2513,9 +2509,9 @@ body {
   background-color: #fff;
   content: '';
   width: 0;
-  -webkit-transition: .5s all ease-in-out;
-  -o-transition: .5s all ease-in-out;
-  transition: .5s all ease-in-out;
+  -webkit-transition: .4s all ease-in-out;
+  -o-transition: .4s all ease-in-out;
+  transition: .4s all ease-in-out;
   z-index: -1;
 }
 

@@ -1,40 +1,28 @@
 
+// window.addEventListener('load', function() {
+//     var $titleOffset = $('.mainBlock__title').offset().top;
+//     var $line = $('.preloader__line');
+//     $line.css('marginTop', ($titleOffset + 6));
+// });
 
 jQuery(function($) {
     
-window.addEventListener('load', function() {
-    // setTimeout( function() {
-        var $titleOffset = $('.mainBlock__title').offset().top,
-            $line = $('.preloader__line'),
-            $firstWord  =  $('.firstWord ');
-        
-        $line.css('marginTop', ($titleOffset + 6));
-    
-        var offsetTop = $line.offset().top + ($firstWord.height() - 2) ,
-            // offsetBottom = $(window).height() - ( offsetTop + $line.height() ),
-            offsetBottom = $(window).height() - ($line.offset().top + 2),
-            fillTop = $('.preloader__fillTop'),
-            fillBottom = $('.preloader__fillBottom');
-    
-        fillTop.css('bottom', offsetBottom);
-        fillBottom.css('top', offsetTop);
-    // } , 300);
-    console.log(offsetBottom);
-    console.log(offsetTop);
-});
-    // var $titleOffset = $('.mainBlock__title').offset().top;
-    // var $line = $('.preloader__line');
-    // $line.css('marginTop', ($titleOffset + 6));
+    var $titleOffset = $('.mainBlock__title').offset().top;
+    var $line = $('.preloader__line');
+    $line.css('marginTop', ($titleOffset + 6));
+    // $(window).height()
 
-    // var offsetTop = $line.offset().top,
-    //     offsetBottom = $(window).height() - ( offsetTop + $line.height() ),
-    //     fillTop = $('.preloader__fillTop'),
-    //     fillBottom = $('.preloader__fillBottom');
+    var offsetTop = $line.offset().top,
+        offsetBottom = $(window).height() - ( offsetTop + $line.height() ),
+        fillTop = $('.preloader__fillTop'),
+        fillBottom = $('.preloader__fillBottom');
 
-    // fillTop.css('bottom', offsetBottom);
-    // fillBottom.css('top', offsetTop);
 
-    
+    $line.css('bottom', offsetBottom);
+    fillTop.css('bottom', offsetBottom);
+    fillBottom.css('top', offsetTop);
+
+    // console.log($listOffset);
     // console.log(offsetBottom);
     
 
@@ -58,19 +46,19 @@ window.addEventListener('load', function() {
 
     $('.wordsWrap').find('.animate').addClass('animate_active');
     $('.preloader__line .firstWord').addClass('firstWord_anim1');
-    // setTimeout( function() {
-    //     $('.preloader__line .firstWord').addClass('firstWord_anim2');
-    // } , 650);
+    setTimeout( function() {
+        $('.preloader__line .firstWord').addClass('firstWord_anim2');
+    } , 450);
     setTimeout( function() {
         $('.wordsWrap').addClass('wordsWrap_animate');
-    } , 2300);
+    } , 1800);
 
     setTimeout( function() {
         $('.preloader').addClass('preloader_animate');
-    } , 2500);
+    } , 2200);
     setTimeout( function() {
         $('.preloader').animate({opacity: "hide"}, 200);
-    } , 3000);
+    } , 2800);
 
 
     var animateItems = $('.animate'),
