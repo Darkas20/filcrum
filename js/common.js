@@ -1,10 +1,8 @@
-
-
 jQuery(function($) {
 
-    var animateItems = $('.animate'),
-        elems = $('.section'),
-        deleteLog = false;
+    var animateItems = $('.animate');
+        // elems = $('.section'),
+        // deleteLog = false;
         
     $('#fullpage').fullpage({
         menu: '#menu',
@@ -41,6 +39,10 @@ jQuery(function($) {
                 } , 500);   
             }
         }
+    });
+    
+    $('.logoBlock').click(function() {
+        $.fn.fullpage.moveTo('mainSection');
     });
 
     $('.navBlock__navArrow_up').click(function() {

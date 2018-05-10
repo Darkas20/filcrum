@@ -1795,8 +1795,8 @@ body {
 }
 
 .menuBtn__button {
-  width: 18px;
-  height: 14px;
+  width: 25px;
+  height: 18px;
   position: relative;
   margin: 0 auto;
   -webkit-transform: rotate(0);
@@ -1945,7 +1945,7 @@ body {
   font-family: Ubuntu;
   font-size: 18px;
   font-weight: 300;
-  color: #fff;
+  color: #fff!important;
   margin-right: 24px;
 }
 
@@ -1971,6 +1971,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,.85);
   -webkit-box-pack: center;
@@ -2010,6 +2011,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  max-width: 100%;
 }
 
 .form__item_request {
@@ -2047,6 +2049,7 @@ body {
   width: calc(100% - 130px);
   height: 100%;
   position: relative;
+  max-width: 100%;
 }
 
 .form__inputWrap_active:before {
@@ -4255,6 +4258,10 @@ body {
     max-width: 250px;
   }
 
+  .about__sceneBlock {
+    margin: 0 0 25px 0;
+  }
+
   .about__monumentBlock {
     width: 173.4px;
     height: 125.3px;
@@ -4355,11 +4362,6 @@ body {
     font-size: 14px;
     line-height: 1.29;
     margin-bottom: 12px;
-  }
-
-  .about__sceneBlock {
-    font-size: 14px;
-    margin: 0 0 25px 0;
   }
 
   .about__scene {
