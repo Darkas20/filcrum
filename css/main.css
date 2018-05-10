@@ -1296,7 +1296,7 @@ body {
   font-weight: 300;
   line-height: 1.29;
   color: #292929;
-  margin-bottom: 45px;
+  margin: 0 auto 45px;
 }
 
 .about__infoText_accent {
@@ -1795,8 +1795,8 @@ body {
 }
 
 .menuBtn__button {
-  width: 25px;
-  height: 18px;
+  width: 30px;
+  height: 22px;
   position: relative;
   margin: 0 auto;
   -webkit-transform: rotate(0);
@@ -1982,6 +1982,7 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .formWrap_show {
@@ -2536,7 +2537,7 @@ body {
   .about__infoText {
     font-size: 24px;
     line-height: 1.5;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     max-width: 500px;
   }
 
@@ -2838,7 +2839,7 @@ body {
   .about__infoText {
     font-size: 20px;
     line-height: 1.25;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     max-width: 370px;
   }
 
@@ -3403,7 +3404,7 @@ body {
 
   .about__infoText {
     text-align: center;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     font-size: 14px;
     line-height: 1.43;
   }
@@ -4254,7 +4255,7 @@ body {
   .about__infoText {
     font-size: 12px;
     line-height: 1.5;
-    margin-bottom: 8px;
+    margin: 0 auto 8px;
     max-width: 250px;
   }
 
