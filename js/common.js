@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-    // $(document).ready(function() {
+    $(document).ready(function() {
         setTimeout( function() {
 
             var $titleOffset = $('.mainBlock__title').offset().top,
@@ -29,8 +29,8 @@ jQuery(function($) {
             setTimeout( function() {
                 $('.preloader').animate({opacity: "hide"}, 200);
             } , 2900);
-    // });
-        } , 300);
+    });
+        } , 500);
 
     var animateItems = $('.animate');
         // elems = $('.section'),
