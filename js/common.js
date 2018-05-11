@@ -7,7 +7,23 @@ jQuery(function($) {
                 $line = $('.preloader__line'),
                 $firstWord  =  $('.firstWord ');
 
-            $line.css('marginTop', ($titleOffset + 6));
+            if ( $(window).width() <= '1920') {
+                $line.css('marginTop', ($titleOffset - 15));
+            }
+            if ( $(window).width() <= '1024') {
+                $line.css('marginTop', ($titleOffset - 26));
+            }
+            if ( $(window).width() <= '992') {
+                $line.css('marginTop', ($titleOffset - 4));
+            }
+            if ( $(window).width() <= '404') {
+                $line.css('marginTop', ($titleOffset - 7));
+            }
+            if ( $(window).width() <= '374') {
+                $line.css('marginTop', ($titleOffset - 8));
+            }
+
+            // $line.css('marginTop', ($titleOffset - 15));
 
             var offsetTop = $line.offset().top + ($firstWord.height() - 2) ,
                 offsetBottom = $(window).height() - ($line.offset().top + 2),
@@ -29,9 +45,14 @@ jQuery(function($) {
             setTimeout( function() {
                 $('.preloader').animate({opacity: "hide"}, 200);
             } , 2900);
-    });
-        } , 500);
+       });
+    } , 500);
 
+    // var elem = $('.mainBlock__title').offsetParent().offset().top;
+    $firstWord  =  $('.firstWord');
+    console.log($firstWord.height());
+    
+    
     var animateItems = $('.animate');
         // elems = $('.section'),
         // deleteLog = false;
