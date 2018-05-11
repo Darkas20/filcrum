@@ -18,19 +18,19 @@ jQuery(function($) {
             fillBottom.css('top', offsetTop);
 
             $('.wordsWrap').find('.animate').addClass('animate_active');
-            $('.preloader__line .firstWord').addClass('firstWord_anim1');
+            // $('.preloader__line .firstWord').addClass('firstWord_anim1');
             setTimeout( function() {
                 $('.wordsWrap').addClass('wordsWrap_animate');
             } , 2300);
         
             setTimeout( function() {
                 $('.preloader').addClass('preloader_animate');
-            } , 2800);
+            } , 2850);
             setTimeout( function() {
                 $('.preloader').animate({opacity: "hide"}, 200);
-            } , 3000);
+            } , 2900);
     // });
-        } , 200);
+        } , 300);
 
     var animateItems = $('.animate');
         // elems = $('.section'),
