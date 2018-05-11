@@ -1,33 +1,36 @@
 jQuery(function($) {
 
-    $(document).ready(function() {
-        var $titleOffset = $('.mainBlock__title').offset().top,
-            $line = $('.preloader__line'),
-            $firstWord  =  $('.firstWord ');
-
-        $line.css('marginTop', ($titleOffset + 6));
-
-        var offsetTop = $line.offset().top + ($firstWord.height() - 2) ,
-            offsetBottom = $(window).height() - ($line.offset().top + 2),
-            fillTop = $('.preloader__fillTop'),
-            fillBottom = $('.preloader__fillBottom');
-    
-        fillTop.css('bottom', offsetBottom);
-        fillBottom.css('top', offsetTop);
-
-        $('.wordsWrap').find('.animate').addClass('animate_active');
-        $('.preloader__line .firstWord').addClass('firstWord_anim1');
+    // $(document).ready(function() {
         setTimeout( function() {
-            $('.wordsWrap').addClass('wordsWrap_animate');
-        } , 2300);
-    
-        setTimeout( function() {
-            $('.preloader').addClass('preloader_animate');
-        } , 2800);
-        setTimeout( function() {
-            $('.preloader').animate({opacity: "hide"}, 200);
-        } , 3000);
-    });
+
+            var $titleOffset = $('.mainBlock__title').offset().top,
+                $line = $('.preloader__line'),
+                $firstWord  =  $('.firstWord ');
+
+            $line.css('marginTop', ($titleOffset + 6));
+
+            var offsetTop = $line.offset().top + ($firstWord.height() - 2) ,
+                offsetBottom = $(window).height() - ($line.offset().top + 2),
+                fillTop = $('.preloader__fillTop'),
+                fillBottom = $('.preloader__fillBottom');
+        
+            fillTop.css('bottom', offsetBottom);
+            fillBottom.css('top', offsetTop);
+
+            $('.wordsWrap').find('.animate').addClass('animate_active');
+            $('.preloader__line .firstWord').addClass('firstWord_anim1');
+            setTimeout( function() {
+                $('.wordsWrap').addClass('wordsWrap_animate');
+            } , 2300);
+        
+            setTimeout( function() {
+                $('.preloader').addClass('preloader_animate');
+            } , 2800);
+            setTimeout( function() {
+                $('.preloader').animate({opacity: "hide"}, 200);
+            } , 3000);
+    // });
+        } , 200);
 
     var animateItems = $('.animate');
         // elems = $('.section'),
