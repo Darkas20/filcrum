@@ -29,6 +29,8 @@ jQuery(function($) {
                 fillTop = $('.preloader__fillTop'),
                 fillBottom = $('.preloader__fillBottom');
         
+            $('.firstWord').addClass('firstWord_animate');
+
             fillTop.css('bottom', offsetBottom);
             fillBottom.css('top', offsetTop);
 

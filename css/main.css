@@ -2467,8 +2467,9 @@ body {
   content: '';
   width: 0;
   z-index: -1;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+}
+
+.preloader .firstWord_animate:before {
   -webkit-animation-name: showHide;
   animation-name: showHide;
   -webkit-animation-iteration-count: 1;
