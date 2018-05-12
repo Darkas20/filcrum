@@ -2467,8 +2467,8 @@ body {
   content: '';
   width: 0;
   z-index: -1;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
   -webkit-animation-name: showHide;
   animation-name: showHide;
   -webkit-animation-iteration-count: 1;
