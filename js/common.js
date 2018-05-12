@@ -37,12 +37,12 @@ jQuery(function($) {
                 $('.wordsWrap').addClass('wordsWrap_animate');
             } , 2300);
         
-            // setTimeout( function() {
-            //     $('.preloader').addClass('preloader_animate');
-            // } , 2850);
-            // setTimeout( function() {
-            //     $('.preloader').animate({opacity: "hide"}, 200);
-            // } , 2900);
+            setTimeout( function() {
+                $('.preloader').addClass('preloader_animate');
+            } , 2850);
+            setTimeout( function() {
+                $('.preloader').animate({opacity: "hide"}, 200);
+            } , 2900);
             
        }, 300);
 
